@@ -1,0 +1,37 @@
+{
+    "name": "outlawplz/laravel-duplicity",
+    "description": "Encrypted bandwidth-efficient backup using the rsync algorithm",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matteo Palazzo",
+            "email": "outlaw.plz@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "symfony/process": "^5.1",
+        "spatie/db-dumper": "^3.0.1"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.17",
+        "phpunit/phpunit": "^9.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Outlawplz\\Duplicity\\": "src",
+            "Outlawplz\\Duplicity\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Outlawplz\\Duplicity\\DuplicityServiceProvider"
+            ]
+        },
+        "aliases": {
+            "Duplicity": "Outlawplz\\Duplicity\\Facades\\Duplicity"
+        }
+    }
+}
